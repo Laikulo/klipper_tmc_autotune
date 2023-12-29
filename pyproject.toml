@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "klippy_tmc_autotune"
 readme = "README.md"
 license = { text = "GPL3" }
-version = "0.0.1"
+version = "0.2.0"
 
 [tool.setuptools.package-data]
 klippy_tmc_autotune = [ "*.cfg" ]
