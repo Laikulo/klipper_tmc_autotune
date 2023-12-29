@@ -1,6 +1,6 @@
 import math, logging, os
 from enum import Enum
-from . import tmc
+from klippy.extras import tmc
 
 # Autotune config parameters
 TUNING_GOAL = 'auto'
@@ -89,7 +89,7 @@ class AutotuneTMC:
 
         # AutotuneTMC config parameters
         self.motor = config.get('motor')
-        self.motor_name = "motor_constants " + self.motor
+        self.motor_name = "klippy_tmc_autotune.motor_constants " + self.motor
         try:
             motor = self.printer.lookup_object(self.motor_name)
         except Exception:
