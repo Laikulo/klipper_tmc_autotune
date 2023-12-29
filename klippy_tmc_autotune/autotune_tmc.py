@@ -1,7 +1,7 @@
 import math, logging, os
 from enum import Enum
 from inspect import signature
-from . import tmc
+from klippy.extras import tmc
 
 # Autotune config parameters
 TUNING_GOAL = 'auto'
@@ -95,7 +95,7 @@ class AutotuneTMC:
             self._set_driver_velocity_field = self._set_driver_velocity_field_old
         # AutotuneTMC config parameters
         self.motor = config.get('motor')
-        self.motor_name = "motor_constants " + self.motor
+        self.motor_name = "klippy_tmc_autotune.motor_constants " + self.motor
         tgoal = config.get('tuning_goal', default=TUNING_GOAL).lower()
         try:
             self.tuning_goal = TuningGoal(tgoal)
